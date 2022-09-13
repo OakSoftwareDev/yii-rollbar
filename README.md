@@ -11,6 +11,8 @@ For Yii2 use [yii2-rollbar](https://github.com/baibaratsky/yii2-rollbar).
 The code of this project has been forked from
 [Ratchetio Component](https://github.com/yiiext/ratchetio-component/tree/5e09ebc042d3c6ec0f69a208395831f05520f88f).
 
+2022-09-13: Forked and updated to rollbar 2.1.0
+
 Installation
 ------------
 
