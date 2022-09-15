@@ -20,11 +20,11 @@ Installation
    
     To install, either run
     ```
-    $ php composer.phar require baibaratsky/yii-rollbar:2.3.*
+    $ php composer.phar require oaksoftwaredev/yii-rollbar:2.3.*
     ```
     or add
     ```
-    "baibaratsky/yii-rollbar": "2.3.*"
+    "oaksoftwaredev/yii-rollbar": "2.3.*"
     ```
     to the `require` section of your `composer.json` file.
 
@@ -35,7 +35,7 @@ Installation
     'components' => array(
         // ...
         'rollbar' => array(
-            'class' => 'application.vendor.baibaratsky.yii-rollbar.RollbarComponent', // adjust path if needed
+            'class' => 'application.vendor.oaksoftwaredev.yii-rollbar.RollbarComponent', // adjust path if needed
             'access_token' => 'your_serverside_rollbar_token',
         ),
     ),
@@ -51,7 +51,7 @@ Installation
     'components' => array(
         // ...
         'errorHandler' => array(
-            'class' => 'application.vendor.baibaratsky.yii-rollbar.RollbarErrorHandler',
+            'class' => 'application.vendor.oaksoftwaredev.yii-rollbar.RollbarErrorHandler',
             // ...
         ),
     ),
@@ -83,7 +83,7 @@ You may want to collect your logs produced by `Yii::log()` in Rollbar. Put the f
         // ...
         'routes' => array(
             array(
-                'class' => 'application.vendor.baibaratsky.yii-rollbar.RollbarLogRoute',
+                'class' => 'application.vendor.oaksoftwaredev.yii-rollbar.RollbarLogRoute',
                 'levels' => 'error, warning, info',
 
                 // You may specify the name of the Rollbar Yii Component ('rollbar' by default)
