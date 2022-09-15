@@ -1,9 +1,9 @@
 {
-    "name": "stump90/yii-rollbar",
+    "name": "oaksoftwaredev/yii-rollbar",
     "description": "Rollbar Yii Extension",
     "keywords": ["rollbar", "ratchetio", "ratchet.io", "yii", "log", "error", "exception", "debug", "monitoring"],
     "license": "BSD-3-Clause",
-    "homepage": "https://github.com/StuMP90/yii-rollbar",
+    "homepage": "https://github.com/OakSoftwareDev/yii-rollbar",
     "authors": [
         {
             "name": "Andrei Baibaratsky",
