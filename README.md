@@ -20,11 +20,11 @@ Installation
    
     To install, either run
     ```
-    $ php composer.phar require oaksoftwaredev/yii-rollbar:2.3.*
+    $ php composer.phar require oaksoftwaredev/yii-rollbar:1.1
     ```
     or add
     ```
-    "oaksoftwaredev/yii-rollbar": "2.3.*"
+    "oaksoftwaredev/yii-rollbar": "1.1"
     ```
     to the `require` section of your `composer.json` file.
 
