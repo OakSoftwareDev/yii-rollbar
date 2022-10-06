@@ -15,8 +15,10 @@ class RollbarErrorHandler extends CErrorHandler
 
     protected function handleError($event)
     {
-        Rollbar::errorHandler($event->code, $event->message, $event->file, $event->line);
-
+        if (method_exists('Rollbar', 'errorHandler')) {
+            Rollbar::errorHandler($event->code, $event->message, $event->file, $event->line);
+        }
+        
         parent::handleError($event);
     }
 }
