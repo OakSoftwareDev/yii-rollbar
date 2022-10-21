@@ -32,8 +32,14 @@ class RollbarComponent extends CApplicationComponent
         $this->root = Yii::getPathOfAlias('application');
         $this->scrub_fields = array('passwd', 'password', 'secret', 'auth_token', 'YII_CSRF_TOKEN');
         $this->checkIgnore = function ($isUncaught, $exception, $payload) {
-            if ($exception instanceof CHttpException && $exception->statusCode == 404) {
-                return true;
+            if ((isset($this->config['exclude_status_codes'])) && (is_array($this->config['exclude_status_codes'])) && (count($this->config['exclude_status_codes']) > 0)) {
+                if ($exception instanceof CHttpException && in_array($exception->statusCode, $this->config['exclude_status_codes'])) {
+                    return true;
+                }
+            } else {
+                if ($exception instanceof CHttpException && $exception->statusCode == 404) {
+                    return true;
+                }
             }
             return false;
         };
