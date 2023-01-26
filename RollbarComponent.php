@@ -39,6 +39,8 @@ class RollbarComponent extends CApplicationComponent
             } else {
                 if ($exception instanceof CHttpException && $exception->statusCode == 404) {
                     return true;
+                } elseif ($exception instanceof CHttpException && $exception->statusCode == 403) {
+                    return true;
                 }
             }
             return false;
